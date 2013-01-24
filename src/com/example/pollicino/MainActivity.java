@@ -1,5 +1,7 @@
 package com.example.pollicino;
 
+import java.util.List;
+
 import com.example.pollicino.R;
 
 import android.os.Bundle;
@@ -8,32 +10,37 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-
+	private PointDAO dao;
 	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
+
 		super.onCreate(savedInstanceState);
+		dao = new PointDAO_DB_impl();
+		dao.open();
+		List<Point> points = dao.getAllPoint();
 		setContentView(R.layout.activity_main);
 		final Button button_start = (Button) findViewById(R.id.button_start);
 		final Button button_stop = (Button) findViewById(R.id.button_stop);
 		final Button button_impostazioni = (Button) findViewById(R.id.button_impostazioni);
 		final Button button_mappa = (Button) findViewById(R.id.button_mappa);
-		final Button button_stats = (Button) findViewById(R.id.button_stats);
 		final Button button_clean = (Button) findViewById(R.id.button_clean);
 		final Toast toast_start = Toast.makeText(this,"Tracking attivato",Toast.LENGTH_LONG);
 		final Toast toast_stop = Toast.makeText(this,"Tracking disattivato",Toast.LENGTH_LONG);
+		TextView textPunti = (TextView) findViewById(R.id.stats_punti);
+		textPunti.setText("Numero di punti: "+ points.size());
+
 
 
 
 		final Intent intent_imp = new Intent(this,Impostazioni.class);
 		final Intent intent_mappa = new Intent(this,Mappa.class);
-		final Intent intent_stats = new Intent(this,Stats.class);
 
 
 
@@ -77,13 +84,7 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		button_stats.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				startActivity(intent_stats);
-			}
-		});
+		
 		
 		button_clean.setOnClickListener(new View.OnClickListener() {
 			

@@ -3,66 +3,68 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/pollicino_bg" >
 
     <Button
         android:id="@+id/button_start"
-        android:layout_width="wrap_content"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="@string/button_start_label"
         style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
-
-    <Button
-        android:id="@+id/button_impostazioni"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button_start"
-        android:text="@string/button_impostazioni_label"
-        style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
-
-    <Button
-        android:id="@+id/button_mappa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button_impostazioni"
-        android:text="@string/button_mappa_label"
-        style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
-    
-    <Button
-        android:id="@+id/button_stats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button_mappa"
-        android:text="@string/button_stats_label"
-        style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
-    
-    <Button
-        android:id="@+id/button_clean"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button_stats"
-        android:text="@string/button_clean_label"
-        style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
+		android:background="@drawable/selector_blue_button" 
+		android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/button_stop"
-        android:layout_width="wrap_content"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/button_start"
         android:text="@string/button_stop_label"
         style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
+		android:background="@drawable/selector_blue_button"
+		android:layout_marginBottom="16dp"
+		android:layout_marginLeft="30dp" />
 
+   <Button
+       android:id="@+id/button_impostazioni"
+       style="@style/HomeButton"
+       android:layout_width="220dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/button_start"
+       android:background="@drawable/selector_blue_button"
+       android:text="@string/button_impostazioni_label" />
+
+   <Button
+       android:id="@+id/button_clean"
+       style="@style/HomeButton"
+       android:layout_width="95dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/button_impostazioni"
+       android:layout_marginTop="16dp"
+       android:background="@drawable/selector_blue_button"
+       android:text="@string/button_clean_label" />
+
+   <Button
+       android:id="@+id/button_mappa"
+       style="@style/HomeButton"
+       android:layout_width="95dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/button_impostazioni"       
+       android:layout_toRightOf="@+id/button_clean"
+       android:background="@drawable/selector_blue_button"
+       android:layout_marginTop="16dp"
+       android:layout_marginLeft ="30dp"       
+       android:text="@string/button_mappa_label" />
+
+   <TextView
+         android:id="@+id/stats_punti"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/stats_punti_label" 
+         android:layout_below="@+id/button_clean" />
+   
 </RelativeLayout>

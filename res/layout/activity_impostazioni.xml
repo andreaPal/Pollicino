@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/pollicino_bg"
     android:orientation="vertical" >
 
-
     <TextView
-         android:id="@+id/tp"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/tp_label" />
+        android:id="@+id/tp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/tp_label" />
 
     <SeekBar
         android:id="@+id/seekBar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="60"
-	/>
-    
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tp"
+        android:layout_marginBottom="16dp"
+        android:max="60" />
+
     <Button
         android:id="@+id/button_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_progress_label"
         style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
-    
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/selector_blue_button"
+        android:text="@string/button_progress_label" />
+
     <Button
         android:id="@+id/button_void"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_void_label"
         style="@style/HomeButton"
-		android:background="@drawable/selector_blue_button" />
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/button_progress"
+        android:layout_below="@+id/seekBar1"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/selector_blue_button"
+        android:text="@string/button_void_label" />
 
-
-
-</LinearLayout>
+</RelativeLayout>

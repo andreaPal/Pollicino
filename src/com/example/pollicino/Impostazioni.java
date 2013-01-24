@@ -4,7 +4,6 @@ import com.example.pollicino.R;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.View;
@@ -16,7 +15,7 @@ import android.widget.TextView;
 public class Impostazioni extends Activity implements OnSeekBarChangeListener {
 	SharedPreferences prefs = MyApplication.getContext().getSharedPreferences("SETTINGS", 0);
 	private SeekBar seekbar;
-	private TextView textProgress,textProgress2;
+	private TextView textProgress;
 	public int sb_progress;
 	public int aggiornamento;
 	SharedPreferences.Editor editor = prefs.edit();
@@ -63,7 +62,7 @@ public class Impostazioni extends Activity implements OnSeekBarChangeListener {
 	@Override
 	public void onProgressChanged(SeekBar seekbar, int progress, boolean arg2) {
 		sb_progress = progress;
-		textProgress.setText("Valore settato: " + Integer.toString(sb_progress) + " minuti");
+		textProgress.setText("Intervallo di update: " + Integer.toString(sb_progress) + " minuti");
 	}
 
 	@Override
