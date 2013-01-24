@@ -11,7 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="@string/button_start_label" />
+        android:text="@string/button_start_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
 
     <Button
         android:id="@+id/button_impostazioni"
@@ -19,7 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button_start"
-        android:text="@string/button_impostazioni_label" />
+        android:text="@string/button_impostazioni_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
 
     <Button
         android:id="@+id/button_mappa"
@@ -27,7 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button_impostazioni"
-        android:text="@string/button_mappa_label" />
+        android:text="@string/button_mappa_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
     
     <Button
         android:id="@+id/button_stats"
@@ -35,7 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button_mappa"
-        android:text="@string/button_stats_label" />
+        android:text="@string/button_stats_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
     
     <Button
         android:id="@+id/button_clean"
@@ -43,7 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button_stats"
-        android:text="@string/button_clean_label" />
+        android:text="@string/button_clean_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
 
     <Button
         android:id="@+id/button_stop"
@@ -51,6 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/button_start"
-        android:text="@string/button_stop_label" />
+        android:text="@string/button_stop_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
 
 </RelativeLayout>

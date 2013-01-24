@@ -22,13 +22,17 @@
         android:id="@+id/button_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_progress_label" />
+        android:text="@string/button_progress_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
     
     <Button
         android:id="@+id/button_void"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_void_label" />
+        android:text="@string/button_void_label"
+        style="@style/HomeButton"
+		android:background="@drawable/selector_blue_button" />
 
 
 

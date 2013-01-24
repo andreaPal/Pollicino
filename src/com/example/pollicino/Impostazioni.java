@@ -48,7 +48,7 @@ public class Impostazioni extends Activity implements OnSeekBarChangeListener {
 		});
 		aggiornamento = prefs.getInt("aggiornamento", 5);
 		seekbar.setProgress(aggiornamento);
-		textProgress.setText("Valore settato: " + Integer.toString(aggiornamento) + " minuti");
+		textProgress.setText("Intervallo di update: " + Integer.toString(aggiornamento) + " minuti");
 	}
 
 	@Override
