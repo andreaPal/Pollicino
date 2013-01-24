@@ -62,9 +62,11 @@
 
    <TextView
          android:id="@+id/stats_punti"
-         android:layout_width="wrap_content"
+         android:layout_width="220dp"
          android:layout_height="wrap_content"
-         android:text="@string/stats_punti_label" 
+         android:text="@string/stats_punti_label"
+         android:layout_marginTop="100dp"
+         android:textSize="20dp"
          android:layout_below="@+id/button_clean" />
    
 </RelativeLayout>

@@ -42,13 +42,22 @@ public class Mappa extends MapActivity implements LocationListener {
 		List<Overlay> mapOverlays = mapView.getOverlays();
 		Drawable drawable = this.getResources().getDrawable(R.drawable.androidmarker);
 		itemizedoverlay = new Punti_Mappa(drawable, this);
-		for (Point p1:points) {
-			System.out.println(Double.toString(p1.getLat()));
-			OverlayItem overlayitem = new OverlayItem(p1.getGeoPoint(), "Coordinate", "Lat: "+Double.toString(p1.getLat())+ " Lng: "+Double.toString(p1.getLng()));
+		for (Point p:points) {
+			System.out.println(Double.toString(p.getLat()));
+			OverlayItem overlayitem = new OverlayItem(p.getGeoPoint(), "Coordinate", "Lat: "+Double.toString(p.getLat())+ " Lng: "+Double.toString(p.getLng()));
 			itemizedoverlay.addOverlay(overlayitem);
 		}
 		itemizedoverlay.populateNow();
 		mapOverlays.add(itemizedoverlay);
+		
+		if (points.size() != 0){
+			Point p = points.get(0);
+			GeoPoint gp = new GeoPoint (
+					(int) (p.getLat() * 1E6),
+					(int) (p.getLng() * 1E6));
+			mc.animateTo(gp);
+			mc.setZoom(17); 
+	    }
 
 	    mapView.invalidate(); 
 	}
