@@ -2,6 +2,8 @@ package com.example.pollicino;
 
 import java.util.List;
 
+import com.example.pollicino.R;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
