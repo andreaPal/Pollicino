@@ -66,9 +66,9 @@ public class Points_Service extends Service implements LocationListener {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	 public void onDestroy() {
+	 /*public void onDestroy() {
 		 dao.close();
-	 }
+	 }*/
 
 
 }

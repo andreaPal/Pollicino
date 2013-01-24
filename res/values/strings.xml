@@ -15,6 +15,7 @@
     <string name="tp_label">Valore settato: 5 minuti</string>
     <string name="button_progress_label">OK</string>
     <string name="button_void_label">Cancel</string>
+    <string name="stats_punti_label">Numero punti:</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_mappa">Mappa</string>
     <string name="title_activity_stats">Stats</string>
