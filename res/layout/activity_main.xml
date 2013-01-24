@@ -28,6 +28,22 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button_impostazioni"
         android:text="@string/button_mappa_label" />
+    
+    <Button
+        android:id="@+id/button_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_mappa"
+        android:text="@string/button_stats_label" />
+    
+    <Button
+        android:id="@+id/button_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_stats"
+        android:text="@string/button_clean_label" />
 
     <Button
         android:id="@+id/button_stop"

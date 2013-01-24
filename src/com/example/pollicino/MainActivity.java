@@ -21,8 +21,14 @@ public class MainActivity extends Activity {
 		final Button button_stop = (Button) findViewById(R.id.button_stop);
 		final Button button_impostazioni = (Button) findViewById(R.id.button_impostazioni);
 		final Button button_mappa = (Button) findViewById(R.id.button_mappa);
+		final Button button_stats = (Button) findViewById(R.id.button_stats);
+		final Button button_clean = (Button) findViewById(R.id.button_clean);
+
+
 		final Intent intent_imp = new Intent(this,Impostazioni.class);
 		final Intent intent_mappa = new Intent(this,Mappa.class);
+		final Intent intent_stats = new Intent(this,Stats.class);
+
 
 
 		button_start.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +63,22 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				startActivity(intent_mappa);
+				
+			}
+		});
+		
+		button_stats.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(intent_stats);
+			}
+		});
+		
+		button_clean.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
 				
 			}
 		});

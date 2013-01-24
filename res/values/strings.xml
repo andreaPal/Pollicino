@@ -8,6 +8,8 @@
     <string name="button_stop_label">Stop</string>
     <string name="button_impostazioni_label">Impostazioni</string>
     <string name="button_mappa_label">Mappa</string>
+    <string name="button_stats_label">Statistiche</string>
+    <string name="button_clean_label">Reset punti</string>
     <string name="set_frequenza_label">Settare la frequenza di aggiornamento del mapping</string>
     <string name="title_activity_impostazioni">Impostazioni</string>
     <string name="tp_label">Valore settato: 5 minuti</string>
@@ -15,5 +17,6 @@
     <string name="button_void_label">Cancel</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_mappa">Mappa</string>
+    <string name="title_activity_stats">Stats</string>
 
 </resources>

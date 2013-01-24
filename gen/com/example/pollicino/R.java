@@ -135,14 +135,16 @@ containing a value of this type.
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f040008;
+        public static final int button_clean=0x7f04000d;
         public static final int button_impostazioni=0x7f04000a;
         public static final int button_mappa=0x7f04000b;
         public static final int button_progress=0x7f040006;
         public static final int button_start=0x7f040009;
-        public static final int button_stop=0x7f04000c;
+        public static final int button_stats=0x7f04000c;
+        public static final int button_stop=0x7f04000e;
         public static final int button_void=0x7f040007;
-        public static final int mapview1=0x7f04000d;
-        public static final int menu_settings=0x7f04000e;
+        public static final int mapview1=0x7f04000f;
+        public static final int menu_settings=0x7f040010;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int satellite=0x7f040002;
@@ -154,20 +156,24 @@ containing a value of this type.
         public static final int activity_impostazioni=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_mappa=0x7f030002;
+        public static final int activity_stats=0x7f030003;
     }
     public static final class menu {
         public static final int activity_impostazioni=0x7f070000;
         public static final int activity_main=0x7f070001;
         public static final int activity_mappa=0x7f070002;
+        public static final int activity_stats=0x7f070003;
     }
     public static final class string {
         public static final int app_name=0x7f05000b;
+        public static final int button_clean_label=0x7f050013;
         public static final int button_impostazioni_label=0x7f050010;
         public static final int button_mappa_label=0x7f050011;
-        public static final int button_progress_label=0x7f050015;
+        public static final int button_progress_label=0x7f050017;
         public static final int button_start_label=0x7f05000e;
+        public static final int button_stats_label=0x7f050012;
         public static final int button_stop_label=0x7f05000f;
-        public static final int button_void_label=0x7f050016;
+        public static final int button_void_label=0x7f050018;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=30] 
@@ -212,12 +218,13 @@ containing a value of this type.
          */
         public static final int common_google_play_services_update_title=0x7f050007;
         public static final int hello=0x7f05000c;
-        public static final int hello_world=0x7f050017;
+        public static final int hello_world=0x7f050019;
         public static final int menu_settings=0x7f05000d;
-        public static final int set_frequenza_label=0x7f050012;
-        public static final int title_activity_impostazioni=0x7f050013;
-        public static final int title_activity_mappa=0x7f050018;
-        public static final int tp_label=0x7f050014;
+        public static final int set_frequenza_label=0x7f050014;
+        public static final int title_activity_impostazioni=0x7f050015;
+        public static final int title_activity_mappa=0x7f05001a;
+        public static final int title_activity_stats=0x7f05001b;
+        public static final int tp_label=0x7f050016;
     }
     public static final class style {
         /** 

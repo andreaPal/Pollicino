@@ -48,13 +48,13 @@ public class Mappa extends MapActivity implements LocationListener {
 		}
 		itemizedoverlay.populateNow();
 		mapOverlays.add(itemizedoverlay);
-		Point p2 = dao.getLastPoint();
-		if (p2 != null) {
+		//Point p2 = dao.getLastPoint();
+		/*if (p2 != null) {
 			GeoPoint gp = new GeoPoint (
 					(int) (p2.getLat() * 1E6),
 					(int) (p2.getLng() * 1E6));
 		    mc.animateTo(gp);
-		}
+		}*/
   
 	    //mc.setZoom(17); 
 	    mapView.invalidate(); 

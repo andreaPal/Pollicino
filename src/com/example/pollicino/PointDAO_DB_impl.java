@@ -74,8 +74,7 @@ public class PointDAO_DB_impl implements PointDAO {
 	public Point getLastPoint() {
 		Cursor cursor = database.query(MySQLiteHelper.TABLE_POINTS,
 		allColumns, null, null, null, null, null);
-		if (!cursor.moveToLast())
-			return null;
+		cursor.moveToLast();			
 		Point point = cursorToPoint(cursor);
 		cursor.close();
 		return point;

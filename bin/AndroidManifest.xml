@@ -7,22 +7,21 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    
-    
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
-        android:name=".MyApplication"
+        android:name="com.example.pollicino.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/DateStyle" >
-		<uses-library
-        android:name="com.google.android.maps"
-        />
+        <uses-library android:name="com.google.android.maps" />
+
         <activity
             android:name="com.example.pollicino.MainActivity"
             android:label="@string/app_name" >
@@ -40,8 +39,14 @@
             android:name="com.example.pollicino.Mappa"
             android:label="@string/title_activity_mappa" >
         </activity>
-        <service android:name="Points_Service"> </service>
 
+        <service android:name="com.example.pollicino.Points_Service" >
+        </service>
+
+        <activity
+            android:name="com.example.pollicino.Stats"
+            android:label="@string/title_activity_stats" >
+        </activity>
     </application>
 
 </manifest>
