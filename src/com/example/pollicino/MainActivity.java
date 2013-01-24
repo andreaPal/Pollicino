@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -23,6 +24,9 @@ public class MainActivity extends Activity {
 		final Button button_mappa = (Button) findViewById(R.id.button_mappa);
 		final Button button_stats = (Button) findViewById(R.id.button_stats);
 		final Button button_clean = (Button) findViewById(R.id.button_clean);
+		final Toast toast_start = Toast.makeText(this,"Tracking attivato",Toast.LENGTH_LONG);
+		final Toast toast_stop = Toast.makeText(this,"Tracking disattivato",Toast.LENGTH_LONG);
+
 
 
 		final Intent intent_imp = new Intent(this,Impostazioni.class);
@@ -35,6 +39,8 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				toast_start.show();
+				button_start.setEnabled(false);
 				startService(new Intent(MainActivity.this, Points_Service.class));
 
 			}
@@ -44,6 +50,8 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				toast_stop.show();
+				button_start.setEnabled(true);
 				stopService(new Intent(MainActivity.this, Points_Service.class));
 				startActivity(intent_mappa);
 			}

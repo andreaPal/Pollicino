@@ -48,15 +48,7 @@ public class Mappa extends MapActivity implements LocationListener {
 		}
 		itemizedoverlay.populateNow();
 		mapOverlays.add(itemizedoverlay);
-		//Point p2 = dao.getLastPoint();
-		/*if (p2 != null) {
-			GeoPoint gp = new GeoPoint (
-					(int) (p2.getLat() * 1E6),
-					(int) (p2.getLng() * 1E6));
-		    mc.animateTo(gp);
-		}*/
-  
-	    //mc.setZoom(17); 
+
 	    mapView.invalidate(); 
 	}
 	
@@ -69,7 +61,7 @@ public class Mappa extends MapActivity implements LocationListener {
 		//getMenuInflater().inflate(R.menu.activity_main, menu);
 		super.onCreateOptionsMenu(menu);
 		int base = menu.FIRST;
-		MenuItem item_naviga = menu.add(base, 1, 1, "Vai verso ultimo punto");
+		MenuItem item_naviga = menu.add(base, 1, 1, "Torna indietro");
 		return true;
 	}
 	
@@ -81,8 +73,10 @@ public class Mappa extends MapActivity implements LocationListener {
 
 	private void chiama_navigatore() {
 		Point point = dao.getLastPoint();
-		IntentUtils.navigatore(this,point);
 		dao.deletePoint(point);
+		Point point2 = dao.getLastPoint();
+		dao.deletePoint(point2);
+		IntentUtils.navigatore(this,point,point2);
 	}
 
 	@Override
